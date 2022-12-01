@@ -356,34 +356,34 @@
 				</div>
 				<div class= "row text-center main_content">
 					<div class= "col-md-6 col-md-offset-3 text-center">
-						<form method="post" action="#">
+						<form method="POST" action="">
 							<div class= "form">
 								<div class="input-group margin-bottom-sm">
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-user fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" type="text" placeholder="Name" required>
+								 	<input class="form-control" name="nome" type="text" placeholder="Name" required>
 								</div>
 								<div class="input-group margin-bottom-sm">
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-envelope-o fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" type="text" placeholder="Email address" required>
+								 	<input class="form-control" name="email" type="text" placeholder="Email address" required>
 								</div>
 								<div class="input-group margin-bottom-sm">
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-tags fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" type="text" placeholder="Subject">
+								 	<input class="form-control" name="assunto" type="text" placeholder="Subject">
 								</div>
 							</div>
 							<div class="input-group margin-bottom-sm">
 									<span class="input-group-addon">
 										<i class="fa fa-comment-o fa-fw"></i>
 									</span>
-								<textarea class="form-control" rows="6" type= "text" placeholder="Your Message" required></textarea>
+								<textarea name="mensagem" class="form-control" rows="6" type= "text" placeholder="Your Message" required></textarea>
 							</div>
-							<input class="btn btn-primary send" type="submit" value="Send Message">
+							<input name="acao" class="btn btn-primary send" type="submit" value="Send Message">
 						</form>
 					</div>	
 				</div>
@@ -482,3 +482,38 @@
        
 	</body>
 </html>
+<?php
+include('config.php');
+
+// $acao = $_POST["acao"];
+
+if ((isset($_POST["acao"]))) {
+	$nome = $_POST["nome"];
+    $email = $_POST["email"];
+	$assunto = $_POST["assunto"];
+    $mensagem = $_POST["mensagem"];
+
+	$sql = "INSERT INTO formulario(nome,email,assunto,mensagem) VALUES ('{$nome}','{$email}','{$assunto}','{$mensagem}')";
+    $res = $con->query($sql);
+
+
+	if ($res==true) {
+		print "<script>alert('Formulário Enviado com sucesso!!');</script>";
+		print "<script> location.href='?page=listar';</script>";
+	}else{
+		print "<script>alert('Usuário cadastrado com sucesso');</script>";
+		print "<script> location.href='?page=home.php';</script>";
+	}
+}
+
+// switch ($acao) {
+// 	case 'cadastrar':
+	
+// 		break;
+	
+// 	default:
+// 		# code...
+// 		break;
+// }
+            
+?>
