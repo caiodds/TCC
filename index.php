@@ -25,6 +25,8 @@
 		<script src="js/script.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/jquery.actual.min.js"></script>
+		<script type="text/javascript" src="pop-up/js/bioep.min.js"></script>
+        <script type="text/javascript" src="pop-up/js/editar.js"></script>
 	</head>
 
 	<body>
@@ -45,10 +47,7 @@
 		      						<li><a href="#about">Sobre nós</a></li>
 		      						<li><a href="#our_service">Download do App</a></li>
 		        					<li><a href="#team">Time de Desenvolvedores</a></li>
-		        					<li><a href="#portfolio">Portfolio</a></li>
-		        					<li><a href="#blog">Blog</a></li>
-		        					<li><a href="#testimonial">Testimonials</a></li>
-		        					<li><a href="#contact">Contact us</a></li>
+		        					<li><a href="#contact">Contato</a></li>
 							    </ul>
 	    					</div>	<!-- collapse navbar-collapse -->
 	  					</div>	<!-- container-fluid -->
@@ -124,11 +123,17 @@
 			        		</div>	<!-- col-sm-4 -->
 			        		<div class="col-sm-4 service">
 			        			<div class="service-icon text-center">
-			        				<i class="fa fa-download fa-5x"></i>
+			        				<i class="fa fa-android fa-5x"></i>
 			        			</div>
 			        			<div class="about-service">
-			        				<h3 class="text-center">Download App</h3>
-			        				<button class="btn btn-primary" >Download</button>
+			        				<h3 class="text-center">Download Apk</h3>
+			        				<button class="btn btn-primary" ><i class="fa solid fa-download"></i> Download</button>
+			        			</div>
+								<br>
+								<i class="fa fa-apple fa-5x"></i>
+								<div class="about-service">
+			        				<h3 class="text-center">Download IOS</h3>
+			        				<button class="btn btn-primary" ><i class="fa solid fa-download"></i> Download</button>
 			        			</div>
 			        		
 			        		</div>	<!-- col-sm-4 -->
@@ -261,54 +266,7 @@
 	    		<div class="row text-center" id="heading">
 	    			<div class= "bg-image">
 		    			<div class= "col-md-6 col-md-offset-3 wow animated zoomInDown" id= "heading-text">
-		        			<h3>Our Blog</h3>
-		                	<p>Sharing knowledge, Accepting challenge.</p>
-		                	<hr class= "full">
-		                	<br/>
-		        		</div>
-		        	</div>
-	    		</div>
-		    	<div class= "row post">
-		    		<div class= "main_content">
-		    			<div class= "post-thumbnail col-md-5">
-		    				<div class= "frame">
-		    					<div class="post-format">
-		    						<span class="icon-picture">
-		    							<i class= "fa fa-laptop"></i>
-		    						</span>
-		    					</div>
-		    					<a href="#"><img class= "img-responsive" src="img/background.jpg" alt=""/></a>
-		    				</div>
-		    				<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
-		    			</div>
-		    			<div class= "post-excerpt col-md-7">
-		    				<h2 class="title"><a href="#">PRINTS  DO APLICATIVO</a></h2>
-		    				<div class="line-dotted"></div>
-		    				<p>
-		    					Diur apelligh to luriem rorde ist thuir quire contears foresa irmde narelair muiers lirguen luirem joires porfelas wateir ogespear pesae. Irmde gues narelair muiers lirguen luirem joires porf wateir ogeepear pesae. Diur tol apelligh to luriem rorde ist thuir quire contears foresa irmde narelair muiers lirguen luirem joires porfelas quie wateir ogespear pesae. Irmde gues narelair muiers lirguen luirem joires porf wateir ogeepear pesae.
-		    					<a href="#">...Read more</a>
-		    				</p> 
-		    				<div class="line-dotted"></div>
-		    				<p class="meta">
-		    					<strong>Date:</strong> 14/February/2013 <strong>By:</strong> Zyanya Peredo <strong>In: </strong><a href="#">Photography</a>, <a href="#">Print</a>, <a href="#">Design</a>
-		    				</p>
-		    				<div class="line-dotted"></div>
-		    				<div class= "post-share">
-		    					<p>Share this post:</p>
-		    					<ul>
-		    						<li>
-		    							<a href="#" data-toggle="tooltip" title="Contact with Facebook" class= "team-facebook">
-					        				<i class="fa fa-facebook"></i>
-					        			</a>
-		    						</li>
-		    						<li>
-		    							<a href="#" data-toggle="tooltip" title="Contact with Twitter" class= "team-twitter">
-					        				<i class="fa fa-twitter"></i>
-					        			</a>
-		    						</li>
-		    						<li>
-		    							<a href="#" data-toggle="tooltip" title="Contact with Google-plus" class= "team-google-plus">
-					        				<i class="fa fa-google-plus"></i>
+		        			
 					        			</a>
 		    						</li>
 		    					</ul>	
@@ -329,18 +287,7 @@
 	    </section>	<!-- blog -->
 
 		<!-- Clients -->
-	    <section id= "testimonial">
-	    	<div class= "container">
-	    		<div class= "row text-center" id= "heading">
-	    			<div class= "bg-image col-md-12">
-	    				<div class= "col-md-6 col-md-offset-3 wow animated zoomInDown" id= "heading-text">
-								</div>
-							</div>
-						</div>
-	    			</div>
-	    		</div>
-	    	</div>	
-	    </section>	<!-- clients -->
+	    	<!-- clients -->
 
 		<!-- contact -->
 	    <section id= "contact">
@@ -374,7 +321,7 @@
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-tags fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" name="assunto" type="text" placeholder="Subject">
+								 	<input class="form-control" name="assunto" type="text" placeholder="Subject" required>
 								</div>
 							</div>
 							<div class="input-group margin-bottom-sm">
@@ -383,7 +330,7 @@
 									</span>
 								<textarea name="mensagem" class="form-control" rows="6" type= "text" placeholder="Your Message" required></textarea>
 							</div>
-							<input name="acao" class="btn btn-primary send" type="submit" value="Send Message">
+							<button name="acao" class="btn btn-primary send" type="submit"><i class="fa regular fa-paper-plane"></i> Enviar</button>
 						</form>
 					</div>	
 				</div>
@@ -418,18 +365,14 @@
 		<section id= "footer" class= "main-footer">
 			<div class= "row">
 				<div class= "logo text-center">
-					<h1>Renessa</h1>
-				</div>
-			</div>
-			<div class= "row">
-				<div class= "copyright text-center">
-					<p> © 2014 Technext. Designed and Developed by <a href="http://themewagon.com"><span class= "theme">Themewagon</span></a></p>
+					<h1>EQUIPE APD</h1>
 				</div>
 			</div>
 		</section><!-- footer -->
 
 		<!-- js -->
 		<script>
+			
 			$(document).ready(function() {
   				$("#client-speech").owlCarousel({
   					autoPlay: 3000,
@@ -499,7 +442,6 @@ if ((isset($_POST["acao"]))) {
 
 	if ($res==true) {
 		print "<script>alert('Formulário Enviado com sucesso!!');</script>";
-		print "<script> location.href='?page=listar';</script>";
 	}else{
 		print "<script>alert('Usuário cadastrado com sucesso');</script>";
 		print "<script> location.href='?page=home.php';</script>";
