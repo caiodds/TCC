@@ -166,12 +166,12 @@
 				    	<div class="col-md-4 col-sm-6 text-center">
 				    		<div class="row wow animated zoomIn" data-wow-delay="0.1s">
 				    			<div class="col-md-8 col-md-offset-2">
-				    				<img class="img-circle img-responsive center-block" src="img/Syed-Rezwanul-Haque.jpg" alt="Syed Rezwanul Haque Rubel">
+				    				<img class="img-circle img-responsive center-block" src="https://avatars.githubusercontent.com/u/99497978?s=400&u=58f6438f05be3602b55b33d052ed225aeadda03a&v=4" alt="Syed Rezwanul Haque Rubel">
 				    			</div>
 				    		</div>
-				        	<h4 class="wow animated fadeInUp" data-wow-delay= "0.2s">Syed Rezwanul Haque Rubel</h4>
-				        	<p class= "member-title wow animated fadeIn" data-wow-delay= "0.3s">Project Manager</p>
-				        	<p class= "team-member-description wow animated fadeIn" data-wow-delay= "0.4s">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna hifd.</p>
+				        	<h4 class="wow animated fadeInUp" data-wow-delay= "0.2s">Caio Ângelo Dos Santos Silva</h4>
+				        	<p class= "member-title wow animated fadeIn" data-wow-delay= "0.3s">Desenvolvedor WEB</p>
+				        	<p class= "team-member-description wow animated fadeIn" data-wow-delay= "0.4s">Minhas redes socias abaixo</p>
 				        	<div class= "row text-center wow animated fadeInDown" data-wow-delay= "0.5s">
 				        		<div class= "team-member-contact">
 				        			<a href="#" data-toggle="tooltip" title="Contact with Facebook" class= "team-facebook">
@@ -191,11 +191,11 @@
 				    	<div class="col-md-4 col-sm-6 text-center">
 				    		<div class= "row wow animated zoomIn" data-wow-delay="0.6s">
 				    			<div class= "col-md-8 col-md-offset-2">
-				    				<img class="img-circle img-responsive center-block" src="img/Shahjahan-Jewel.jpg" alt= "Shahjahan Jewel" >
+				    				<img class="img-circle img-responsive center-block" src="https://avatars.githubusercontent.com/u/89306240?v=4" alt= "Shahjahan Jewel" >
 				    			</div>
 				    		</div>
-				        	<h4 class= "wow animated fadeInUp" data-wow-delay= "0.7s">Shahjahan Jewel</h4>
-				        	<p class= "member-title wow animated fadeIn" data-wow-delay= "0.8s">Head Of Ideas</p>
+				        	<h4 class= "wow animated fadeInUp" data-wow-delay= "0.7s">Felype Rangel</h4>
+				        	<p class= "member-title wow animated fadeIn" data-wow-delay= "0.8s">Lider do Grupo(Desenvolvedor Do Aplicativo)</p>
 				        	<p class= "team-member-description wow animated fadeIn" data-wow-delay= "0.9s">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 				        	<div class= "row text-center wow animated fadeInDown" data-wow-delay= "0.5s">	
 				        		<div class= "team-member-contact">
