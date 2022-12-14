@@ -27,6 +27,7 @@
 		<script src="js/jquery.actual.min.js"></script>
 		<script type="text/javascript" src="pop-up/js/bioep.min.js"></script>
         <script type="text/javascript" src="pop-up/js/editar.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</head>
 
 	<body>
@@ -309,52 +310,34 @@
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-user fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" name="nome" type="text" placeholder="Name" required>
+								 	<input class="form-control" name="nome" type="text" placeholder="Name" >
 								</div>
 								<div class="input-group margin-bottom-sm">
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-envelope-o fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" name="email" type="text" placeholder="Email address" required>
+								 	<input class="form-control" name="email" type="text" placeholder="Email address" >
 								</div>
 								<div class="input-group margin-bottom-sm">
 	  								<span class="input-group-addon">
 	  									<i class="fa fa-tags fa-fw"></i>
 	  								</span>
-								 	<input class="form-control" name="assunto" type="text" placeholder="Subject" required>
+								 	<input class="form-control" name="assunto" type="text" placeholder="Subject" >
 								</div>
 							</div>
 							<div class="input-group margin-bottom-sm">
 									<span class="input-group-addon">
 										<i class="fa fa-comment-o fa-fw"></i>
 									</span>
-								<textarea name="mensagem" class="form-control" rows="6" type= "text" placeholder="Your Message" required></textarea>
+								<textarea name="mensagem" class="form-control" rows="6" type= "text" placeholder="Your Message" ></textarea>
 							</div>
-							<button name="acao" class="btn btn-primary send" type="submit"><i class="fa regular fa-paper-plane"></i> Enviar</button>
+							<button  name="acao" class="btn btn-primary send" type="submit"><i class="fa regular fa-paper-plane"></i> Enviar</button>
 						</form>
 					</div>	
 				</div>
 				<div class= "row">
 					<div class= "col-md-6 col-md-offset-3 text-center">
 						<ul class="socials-icons">
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Twitter" class="twitter"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Google +" class="google-plus"><i class="fa fa-google-plus"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Pinterest" class="pinterest"><i class="fa fa-pinterest"></i></a>
-							</li>
-							<li>
-								<a href="#" data-toggle="tooltip" title="Connect with Skype" class="skype"><i class="fa fa-skype"></i></a>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -435,17 +418,23 @@ if ((isset($_POST["acao"]))) {
     $email = $_POST["email"];
 	$assunto = $_POST["assunto"];
     $mensagem = $_POST["mensagem"];
-
-	$sql = "INSERT INTO formulario(nome,email,assunto,mensagem) VALUES ('{$nome}','{$email}','{$assunto}','{$mensagem}')";
-    $res = $con->query($sql);
-
-
-	if ($res==true) {
-		print "<script>alert('Formulário Enviado com sucesso!!');</script>";
+	if (empty($nome||$email||$assunto||$mensagem)) {
+		print "<script>
+		Swal.fire(
+		'Campos Vazios',
+		'',
+		'error'
+		  )</script>";
 	}else{
-		print "<script>alert('Usuário cadastrado com sucesso');</script>";
-		print "<script> location.href='?page=home.php';</script>";
+		print "<script>Swal.fire(
+			'Formulário Enviado Com Sucesso Obrigado Pelo Feedback :)',
+			'',
+			'success'
+		  )</script>";
+		$sql = "INSERT INTO formulario(nome,email,assunto,mensagem) VALUES ('{$nome}','{$email}','{$assunto}','{$mensagem}')";
+    	$res = $con->query($sql);
 	}
+	
 }
 
 // switch ($acao) {

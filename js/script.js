@@ -1,7 +1,6 @@
 ///////////////////////////////
 // Smart Resize
 ///////////////////////////////
-
 (function($,sr) {
     var debounce = function (func, threshold, execAsap) {
         var timeout;
